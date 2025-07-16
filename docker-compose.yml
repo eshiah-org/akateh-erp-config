@@ -1,6 +1,6 @@
 services:
   backend:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -15,7 +15,7 @@ services:
       DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
 
   configurator:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -44,7 +44,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -101,7 +101,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     depends_on:
@@ -127,7 +127,7 @@ services:
       - "8080:8080"
 
   queue-long:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -143,7 +143,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   queue-short:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -177,7 +177,7 @@ services:
         condition: on-failure
 
   scheduler:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:
@@ -191,7 +191,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   websocket:
-    image: akateh-erp:latest
+    image: ghcr.io/eshiah-org/akateh-erp:latest
     networks:
       - frappe_network
     deploy:

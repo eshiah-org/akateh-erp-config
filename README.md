@@ -17,7 +17,7 @@ docker build \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.11.9 \
   --build-arg=NODE_VERSION=20.19.2 \
-  --tag=akateh-erp \
+  --tag=ghcr.io/eshiah-org/akateh-erp \
   --file=Containerfile .
 ```
 
@@ -60,7 +60,7 @@ You should see "Login Succeeded".
 
 ### 3. Tag Your Local Image
 
-Tag your locally built image with the GHCR path. Replace `eshiah-org` with your actual GitHub username, all in lowercase.
+Tag your locally built image with the GHCR path. This is only needed if your built command din't use the registry path. For instance, assuming you named the iamge `akateh-erp:latest`. In this case, here's the command to tag it:
 
 ```bash
 docker tag akateh-erp:latest ghcr.io/eshiah-org/akateh-erp:latest
