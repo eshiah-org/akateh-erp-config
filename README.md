@@ -1,4 +1,4 @@
-# Setting up ERPNext with custom apps
+# Setting custom apps
 
 ## Environment Variables
 This project uses a `.env` file to manage sensitive environment variables. A `.env.example` file is provided as a template.
