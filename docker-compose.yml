@@ -3,7 +3,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -19,7 +19,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: none
@@ -49,7 +49,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: none
@@ -83,7 +83,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     depends_on:
       - websocket
     deploy:
@@ -110,7 +110,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -127,7 +127,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -144,7 +144,7 @@ services:
     image: redis:6.2-alpine
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -155,7 +155,7 @@ services:
     image: redis:6.2-alpine
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -164,7 +164,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -179,7 +179,7 @@ services:
     image: ghcr.io/eshiah-org/akateh-erp:latest
     platform: linux/amd64
     networks:
-      - frappe_network
+      - dokploy-network
     deploy:
       restart_policy:
         condition: on-failure
@@ -197,5 +197,5 @@ volumes:
   logs:
 
 networks:
-  frappe_network:
-    driver: bridge
+  dokploy-network:
+    external: true
