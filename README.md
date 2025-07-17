@@ -13,6 +13,7 @@ This project uses a `.env` file to manage sensitive environment variables. A `.e
 Run the following command to build the image:
 ```bash
 docker build \
+  --platform linux/amd64 \
   --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.11.9 \

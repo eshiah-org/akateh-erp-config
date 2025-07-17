@@ -1,6 +1,6 @@
 services:
   db:
-    image: mariadb:10.6
+    image: mariadb:10.6.17
     healthcheck:
       test: mysqladmin ping -h localhost --password=${DB_ROOT_PASSWORD}
       interval: 1s
